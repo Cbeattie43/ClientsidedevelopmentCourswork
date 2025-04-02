@@ -10,6 +10,7 @@
     <!-- Header -->
     <header>
         <div class="logo">Harland Wealth</div>
+        <div id="date-time"></div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -20,7 +21,17 @@
             </ul>
         </nav>
     </header>
+    
 
+    <script>
+        function updateDateTime() {
+            const now = new Date();
+            document.getElementById('date-time').textContent = now.toLocaleString();
+        }
+        setInterval(updateDateTime, 1000);
+        updateDateTime();
+    </script>
+    
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-text">
