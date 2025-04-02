@@ -17,6 +17,7 @@
         const date = new Date();
         date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
         document.cookie = `${name}=${value};expires=${date.toUTCString()};path=/`;
+        localStorage.setItem(name, value); // Store in local storage
     }
 
     function getCookie(name) {
@@ -25,7 +26,7 @@
             const [key, value] = cookie.trim().split('=');
             if (key === name) return value;
         }
-        return null;
+        return localStorage.getItem(name); // Fallback to local storage
     }
 
     function acceptCookies() {
