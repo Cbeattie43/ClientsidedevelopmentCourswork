@@ -7,6 +7,41 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+   <!-- Cookie Consent Banner -->
+   <div id="cookie-banner" style="display: none; position: fixed; bottom: 0; width: 100%; background: #004d40; color: white; padding: 10px; text-align: center;">
+    <p>We use cookies to improve your experience. By using our site, you agree to our <a href="privacy.html" style="color: #80cbc4;">Privacy Policy</a>.</p>
+    <button onclick="acceptCookies()" style="background: #00796b; color: white; border: none; padding: 5px 10px; cursor: pointer;">Accept</button>
+</div>
+<script>
+    function setCookie(name, value, days) {
+        const date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        document.cookie = `${name}=${value};expires=${date.toUTCString()};path=/`;
+    }
+
+    function getCookie(name) {
+        const cookies = document.cookie.split(';');
+        for (let cookie of cookies) {
+            const [key, value] = cookie.trim().split('=');
+            if (key === name) return value;
+        }
+        return null;
+    }
+
+    function acceptCookies() {
+        setCookie('cookieConsent', 'true', 365);
+        document.getElementById('cookie-banner').style.display = 'none';
+    }
+
+    function checkCookieConsent() {
+        if (!getCookie('cookieConsent')) {
+            document.getElementById('cookie-banner').style.display = 'block';
+        }
+    }
+
+    checkCookieConsent();
+</script>
+
     <!-- Header -->
     <header>
         <div class="logo">Harland Wealth</div>
@@ -33,7 +68,7 @@
     </script>
     
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" style="animation: fadeIn 2s;"></section>
         <div class="hero-text">
             <h1>Secure Your Financial Future</h1>
             <p>Expert financial solutions to help you achieve your goals.</p>
