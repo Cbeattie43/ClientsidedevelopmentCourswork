@@ -266,6 +266,13 @@ footer ul li a:hover {
     color: #004d40;
 }
 
+/* Team Member */
+.team-member {
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
 
 /* Animations */
 @keyframes fadeIn {
