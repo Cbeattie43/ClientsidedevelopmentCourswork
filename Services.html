@@ -59,9 +59,20 @@
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
             <h3 id="modalTitle">Service Title</h3>
-            <p> id="modalText"Service Description</p>
+            <p> id="modalText">Service Description</p>
         </div>
     </div>
+    <script>
+        function openModal(title, text) {
+            document.getElementById("modalTitle").innerText = title;
+            document.getElementById("modalText").innerText = Text;
+            document.getElementById("popupmodal").style.display = "flex";
+        }
+
+        function closeModal() {
+            document.getElementById("popupModal").style.display ="none"
+        }
+    </script>
     <!-- Footer -->
     <footer>
         <div class="footer-content">
