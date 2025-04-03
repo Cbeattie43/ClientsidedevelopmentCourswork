@@ -39,7 +39,7 @@
     <section class="services-overview">
         <h2>Explore Our Services</h2>
         <div class="service-cards">
-            <div class="card">
+            <div class="card"onclick="openModal('Investment Planning', 'Maximize your wealth,')">
                 <h3>Investment Planning</h3>
                 <p>Maximize your wealth with tailored investment strategies.</p>
             </div>
@@ -54,6 +54,25 @@
         </div>
     </section>
 
+    <!--Modal-->
+    <div class="modal" id="popupmodal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3 id="modalTitle">Service Title</h3>
+            <p> id="modalText">Service Description</p>
+        </div>
+    </div>
+    <script>
+        function openModal(title, text) {
+            document.getElementById("modalTitle").innerText = title;
+            document.getElementById("modalText").innerText = Text;
+            document.getElementById("popupmodal").style.display = "flex";
+        }
+
+        function closeModal() {
+            document.getElementById("popupModal").style.display ="none"
+        }
+    </script>
     <!-- Footer -->
     <footer>
         <div class="footer-content">

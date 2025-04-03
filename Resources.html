@@ -54,21 +54,21 @@
         </div>
     </section>
 
-    <!-- Add a Calculator Section -->
+    <!-- Investment Calculator -->
     <section class="calculator">
         <h2>Investment Calculator</h2>
         <form id="calculator-form">
             <div class="form-group">
                 <label for="principal">Principal Amount (£):</label>
-                <input type="number" id="principal" name="principal" required>
+                <input type="number" id="principal" name="principal" required min="0">
             </div>
             <div class="form-group">
                 <label for="rate">Annual Interest Rate (%):</label>
-                <input type="number" id="rate" name="rate" required>
+                <input type="number" id="rate" name="rate" required min="0">
             </div>
             <div class="form-group">
                 <label for="years">Number of Years:</label>
-                <input type="number" id="years" name="years" required>
+                <input type="number" id="years" name="years" required min="1">
             </div>
             <button type="button" class="calculate-button" onclick="calculateInvestment()">Calculate</button>
         </form>
