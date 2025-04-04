@@ -56,6 +56,10 @@ nav ul li .cta:hover {
     position: relative;
     height: 70vh;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .hero-video {
@@ -75,6 +79,7 @@ nav ul li .cta:hover {
     padding: 20px;
     border-radius: 10px;
     animation: fadeIn 1.5s ease-in-out;
+    color: white;
 }
 
 .hero-text h1 {
