@@ -16,8 +16,8 @@
             border: 1px solid #ddd;
             border-radius: 8px;
             background-color: #f9f9f9;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             background: url('images/contact-bg.jpg') no-repeat center center/cover;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .contact-form {
@@ -67,17 +67,16 @@
             background-color: #0056b3;
         }
 
-<<<<<<< Updated upstream
         .error-message {
             color: red;
             font-size: 14px;
             margin-top: 5px;
-=======
+        }
+
         .contact-info img {
             max-width: 100%;
             border-radius: 8px;
             margin-top: 10px;
->>>>>>> Stashed changes
         }
     </style>
 </head>
@@ -100,7 +99,7 @@
     <section class="content">
         <h1>Contact Us</h1>
         <div class="contact-form-container">
-            <form class="contact-form" onsubmit="return validateForm()"></form>
+            <form class="contact-form" onsubmit="return validateForm()">
                 <div class="form-group">
                     <label for="name">Your Name</label>
                     <input type="text" id="name" name="name" placeholder="Enter your full name" required>
@@ -160,11 +159,7 @@
         function scrollToTop() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
-<<<<<<< Updated upstream
-        
-=======
 
->>>>>>> Stashed changes
         function updateDateTime() {
             const now = new Date();
             document.getElementById('date-time').textContent = now.toLocaleString();
