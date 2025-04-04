@@ -5,23 +5,46 @@
     <title>Contact Us</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        .contact-form-container {
+        .contact-container {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
             margin: 50px auto;
-            max-width: 600px;
+            max-width: 1200px;
             padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            background-color: #f9f9f9;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            background: url('images/contact-bg.jpg') no-repeat center center/cover;
         }
 
-        .contact-form {
-            width: 100%;
+        .contact-left, .contact-right {
+            flex: 1;
+            margin: 10px;
+        }
+
+        .contact-left {
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-left img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            margin: 20px auto;
+            display: block;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-right {
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form-container {
             background: rgba(255, 255, 255, 0.8);
             padding: 20px;
             border-radius: 8px;
@@ -67,17 +90,10 @@
             background-color: #0056b3;
         }
 
-<<<<<<< Updated upstream
         .error-message {
             color: red;
             font-size: 14px;
             margin-top: 5px;
-=======
-        .contact-info img {
-            max-width: 100%;
-            border-radius: 8px;
-            margin-top: 10px;
->>>>>>> Stashed changes
         }
     </style>
 </head>
@@ -99,36 +115,39 @@
 
     <section class="content">
         <h1>Contact Us</h1>
-        <div class="contact-form-container">
-            <form class="contact-form" onsubmit="return validateForm()"></form>
-                <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            <section class="contact-container">
+                <div class="contact-left">
+                    <h2>Contact Information</h2>
+                    <p><strong>Phone:</strong> +44 07234 9382</p>
+                    <p><strong>Email:</strong> support@harlandwealth.com</p>
+                    <p><strong>Office Address:</strong> 123 High Street, Belfast BT1 2BT</p>
+                    <img src="Images/pexels-essow-k-251295-936722.jpg" alt="Harland Wealth Office">
                 </div>
-                <div class="form-group">
-                    <label for="email">Your Email</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                <div class="contact-right">
+                    <h2>Get in Touch</h2>
+                <div class="contact-form-container">
+                    <form class="contact-form" onsubmit="return validateForm()">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Your Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Write your message here" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">Submit</button>
+                    </form>
                 </div>
-                <div class="form-group">
-                    <label for="phone">Your Phone Number</label>
-                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" placeholder="Write your message here" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="submit-button">Submit</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Contact Information -->
-    <section class="contact-info">
-        <h2>Contact Information</h2>
-        <p><strong>Phone:</strong> +1 (555) 123-4567</p>
-        <p><strong>Email:</strong> support@harlandwealth.com</p>
-        <p><strong>Office Address:</strong> 123 Finance Street, Suite 456, New York, NY 10001</p>
-        <img src="images/office-location.jpg" alt="Harland Wealth Office">
+            </div>
+        </section>
     </section>
 
     <!-- FAQ Section -->
@@ -151,6 +170,11 @@
                 <li><a href="privacy.html">Privacy Policy</a></li>
                 <li><a href="terms.html">Terms of Service</a></li>
             </ul>
+            <div class="socials">
+                <a href="https://facebook.com" target="_blank">Facebook</a> |
+                <a href="https://twitter.com" target="_blank">Twitter</a> |
+                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+            </div>
         </div>
     </footer>
 
@@ -160,11 +184,7 @@
         function scrollToTop() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
-<<<<<<< Updated upstream
-        
-=======
 
->>>>>>> Stashed changes
         function updateDateTime() {
             const now = new Date();
             document.getElementById('date-time').textContent = now.toLocaleString();
