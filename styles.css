@@ -212,6 +212,8 @@ footer ul li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center; /* Ensures text is centered */
+    line-height: 1; /* Prevents text from overflowing */
     z-index: 1000;
 }
 
