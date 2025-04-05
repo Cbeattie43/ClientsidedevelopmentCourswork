@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Financial Resources</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Harland Wealth</div>
+        <div id="date-time"></div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="cta">Get Started</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Resources Section -->
+    <section class="content">
+        <h1>Financial Learning Hub</h1>
+        <p>Browse through our expert financial guides and resources.</p>
+    </section>
+
+    <section class="categorized-resources">
+        <h2>Our Resources</h2>
+        <div class="categories">
+            <div class="category">
+                <h3>Investment Guides</h3>
+                <ul>
+                    <li><a href="investment-guide.html"><img src="images/investment.jpg" alt="Investment Guide"> Beginner's Guide to Investing</a></li>
+                    <li><a href="market-trends.html"><img src="images/market.jpg" alt="Market Trends"> Understanding Market Trends</a></li>
+                </ul>
+            </div>
+            <div class="category">
+                <h3>Retirement Planning</h3>
+                <ul>
+                    <li><a href="retirement-2025.html">Retirement Planning in 2025</a></li>
+                    <li><a href="pension-options.html">Exploring Pension Options</a></li>
+                </ul>
+            </div>
+            <div class="category">
+                <h3>Tax Strategies</h3>
+                <ul>
+                    <li><a href="tax-tips.html">Tax Tips for Business Owners</a></li>
+                    <li><a href="deduction-guide.html">Maximizing Tax Deductions</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Calculator -->
+    <section class="calculator">
+        <h2>Investment Calculator</h2>
+        <form id="calculator-form">
+            <div class="form-group">
+                <label for="principal">Principal Amount (£):</label>
+                <input type="number" id="principal" name="principal" required min="0">
+            </div>
+            <div class="form-group">
+                <label for="rate">Annual Interest Rate (%):</label>
+                <input type="number" id="rate" name="rate" required min="0">
+            </div>
+            <div class="form-group">
+                <label for="years">Number of Years:</label>
+                <input type="number" id="years" name="years" required min="1">
+            </div>
+            <button type="button" class="calculate-button" onclick="calculateInvestment()">Calculate</button>
+        </form>
+        <div class="result" id="result"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 Harland Wealth. All rights reserved.</p>
+            <ul>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+            </ul>
+            <div class="socials">
+                <a href="https://facebook.com" target="_blank">Facebook</a> |
+                <a href="https://twitter.com" target="_blank">Twitter</a> |
+                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" onclick="scrollToTop()">Back to Top</button>
+
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function calculateInvestment() {
+            const principal = parseFloat(document.getElementById('principal').value);
+            const rate = parseFloat(document.getElementById('rate').value) / 100;
+            const years = parseInt(document.getElementById('years').value);
+
+            if (isNaN(principal) || isNaN(rate) || isNaN(years)) {
+                document.getElementById('result').textContent = 'Please enter valid numbers.';
+                return;
+            }
+
+            const amount = principal * Math.pow(1 + rate, years);
+            document.getElementById('result').textContent = `Future Value: £${amount.toFixed(2)}`;
+        }
+
+        function updateDateTime() {
+            const now = new Date();
+            document.getElementById('date-time').textContent = now.toLocaleString();
+        }
+        setInterval(updateDateTime, 1000);
+        updateDateTime();
+    </script>
+</body>
+</html>
