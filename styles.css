@@ -365,3 +365,11 @@ img:hover {
     border-radius: 8px;
     position: relative;
 }
+
+.popover .close{
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    font-size: 20px;
+    cursor: pointer;
+}
