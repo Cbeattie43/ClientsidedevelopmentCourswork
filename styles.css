@@ -355,3 +355,13 @@ img:hover {
     display: none;
     z-index: 1000;
 }
+
+.popover-content {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    padding: 1rem;
+    width: 250px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    position: relative;
+}
