@@ -7,41 +7,41 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-   <!-- Cookie Consent Banner -->
-   <div id="cookie-banner" style="display: none; position: fixed; bottom: 0; width: 100%; background: #004d40; color: white; padding: 10px; text-align: center;">
-    <p>We use cookies to improve your experience. By using our site, you agree to our <a href="privacy.html" style="color: #80cbc4;">Privacy Policy</a>.</p>
-    <button onclick="acceptCookies()" style="background: #00796b; color: white; border: none; padding: 5px 10px; cursor: pointer;">Accept</button>
-</div>
-<script>
-    function setCookie(name, value, days) {
-        const date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        document.cookie = `${name}=${value};expires=${date.toUTCString()};path=/`;
-        localStorage.setItem(name, value); // Store in local storage
-    }
-
-    function getCookie(name) {
-        const cookies = document.cookie.split(';');
-        for (let cookie of cookies) {
-            const [key, value] = cookie.trim().split('=');
-            if (key === name) return value;
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-banner" style="display: none; position: fixed; bottom: 0; width: 100%; background: #004d40; color: white; padding: 10px; text-align: center;">
+        <p>We use cookies to improve your experience. By using our site, you agree to our <a href="privacy.html" style="color: #80cbc4;">Privacy Policy</a>.</p>
+        <button onclick="acceptCookies()" style="background: #00796b; color: white; border: none; padding: 5px 10px; cursor: pointer;">Accept</button>
+    </div>
+    <script>
+        function setCookie(name, value, days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            document.cookie = `${name}=${value};expires=${date.toUTCString()};path=/`;
+            localStorage.setItem(name, value); // Store in local storage
         }
-        return localStorage.getItem(name); // Fallback to local storage
-    }
 
-    function acceptCookies() {
-        setCookie('cookieConsent', 'true', 365);
-        document.getElementById('cookie-banner').style.display = 'none';
-    }
-
-    function checkCookieConsent() {
-        if (!getCookie('cookieConsent')) {
-            document.getElementById('cookie-banner').style.display = 'block';
+        function getCookie(name) {
+            const cookies = document.cookie.split(';');
+            for (let cookie of cookies) {
+                const [key, value] = cookie.trim().split('=');
+                if (key === name) return value;
+            }
+            return localStorage.getItem(name); // Fallback to local storage
         }
-    }
 
-    checkCookieConsent();
-</script>
+        function acceptCookies() {
+            setCookie('cookieConsent', 'true', 365);
+            document.getElementById('cookie-banner').style.display = 'none';
+        }
+
+        function checkCookieConsent() {
+            if (!getCookie('cookieConsent')) {
+                document.getElementById('cookie-banner').style.display = 'block';
+            }
+        }
+
+        checkCookieConsent();
+    </script>
 
     <!-- Header -->
     <header>
@@ -61,7 +61,6 @@
             </ul>
         </nav>
     </header>
-    
 
     <script>
         function updateDateTime() {
@@ -71,7 +70,7 @@
         setInterval(updateDateTime, 1000);
         updateDateTime();
     </script>
-    
+
     <!-- Hero Section -->
     <section class="hero" style="animation: fadeIn 2s;">
         <video autoplay muted loop class="hero-video">
@@ -83,7 +82,8 @@
             <p>Expert financial solutions to help you achieve your goals.</p>
             <div class="hero-button-container">
                 <a href="contact.html" class="button">Get Started</a>
-            </div>  
+                <a href="services.html" class="button secondary-button">Explore Services</a>
+            </div>
         </div>
     </section>
 
@@ -106,6 +106,16 @@
         </div>
     </section>
 
+    <!-- Newsletter Signup -->
+    <section class="newsletter">
+        <h2>Stay Updated</h2>
+        <p>Subscribe to our newsletter for the latest financial tips and updates.</p>
+        <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+
     <!-- Testimonials -->
     <section class="testimonials">
         <h2>What Our Clients Say</h2>
@@ -117,6 +127,10 @@
             <div class="testimonial">
                 <p>"Their investment strategies have significantly improved my portfolio."</p>
                 <span>- James R.</span>
+            </div>
+            <div class="testimonial">
+                <p>"The personalized approach made all the difference for my financial goals."</p>
+                <span>- Emily T.</span>
             </div>
         </div>
     </section>
