@@ -33,7 +33,7 @@ header .logo {
 }
 
 .header-logo img {
-    width: 100px; /* Increased size for better readability */
+    width: 200px; /* Enlarged size to make the slogan visible */
     height: auto;
 }
 
