@@ -172,11 +172,63 @@ nav ul li .cta:hover {
 footer {
     background: #004d40;
     color: white;
+    padding: 40px 20px;
     text-align: center;
-    padding: 20px;
 }
 
-footer ul {
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #80cbc4;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-column p {
+    font-size: 0.9rem;
+    margin: 5px 0;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #80cbc4;
+    padding-top: 10px;
+    font-size: 0.8rem;
+}
+
+.footer-bottom ul {
     list-style: none;
     padding: 0;
     margin: 10px 0;
@@ -185,14 +237,35 @@ footer ul {
     gap: 15px;
 }
 
-footer ul li a {
+.footer-bottom ul li a {
     color: white;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 0.8rem;
 }
 
-footer ul li a:hover {
+.footer-bottom ul li a:hover {
     text-decoration: underline;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-button img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    object-fit: contain;
+    background-color: white;
+}
+
+.social-button img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Back-to-Top Button */
@@ -384,11 +457,12 @@ img:hover {
 }
 
 .social-button img {
-    width: 50px; /* Adjusted size for better visibility */
+    width: 50px; /* Ensures consistent size for all logos */
     height: 50px;
     border-radius: 50%; /* Makes the logos circular */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    object-fit: cover; /* Ensures the image fits within the circle */
+    object-fit: contain; /* Ensures the LinkedIn logo fits within the circle */
+    background-color: white; /* Adds a background for better contrast if needed */
 }
 
 .social-button img:hover {
