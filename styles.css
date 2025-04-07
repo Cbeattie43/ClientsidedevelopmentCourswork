@@ -461,3 +461,61 @@ img:hover {
     font-size: 14px;
     margin-top: 5px;
 }
+}
+
+/* Contact Container */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 50px auto;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.contact-left, .contact-right {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-left {
+    text-align: center;
+}
+
+.contact-left img {
+    max-width: 80%;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact-right {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.popover{
+    position:absolute;
+    display: none;
+    z-index: 1000;
+}
+
+.popover-content {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    padding: 1rem;
+    width: 250px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    position: relative;
+}
+
+.popover .close{
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    font-size: 20px;
+    cursor: pointer;
+}
