@@ -59,4 +59,8 @@ updateDateTime();
         function clearErrors() {
             document.querySelectorAll('.error-message').forEach(error => error.remove());
         }
+        
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
     
