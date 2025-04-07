@@ -225,14 +225,15 @@ nav ul li .cta:hover {
 
 .testimonial-slider {
     display: flex;
-    overflow-x: auto;
+    justify-content: space-between; /* Space the cards equally */
     gap: 20px;
     padding: 20px;
     scroll-snap-type: x mandatory;
+    flex-wrap: wrap; /* Ensure responsiveness */
 }
 
 .testimonial {
-    flex: 0 0 300px;
+    flex: 1 1 calc(33.333% - 20px); /* Ensure equal spacing for three cards */
     background: white;
     padding: 20px;
     border-radius: 10px;
