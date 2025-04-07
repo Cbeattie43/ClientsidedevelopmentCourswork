@@ -64,3 +64,52 @@ updateDateTime();
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     
+        
+        function calculateInvestment() {
+            const principal = parseFloat(document.getElementById('principal').value);
+            const rate = parseFloat(document.getElementById('rate').value) / 100;
+            const years = parseInt(document.getElementById('years').value);
+
+            if (isNaN(principal) || isNaN(rate) || isNaN(years)) {
+                document.getElementById('result').textContent = 'Please enter valid numbers.';
+                return;
+            }
+
+            const amount = principal * Math.pow(1 + rate, years);
+            document.getElementById('result').textContent = `Future Value: £${amount.toFixed(2)}`;
+        }
+
+        function updateDateTime() {
+            const now = new Date();
+            document.getElementById('date-time').textContent = now.toLocaleString();
+        }
+        setInterval(updateDateTime, 1000);
+        updateDateTime();
+        function setCookie(name, value, days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            document.cookie = `${name}=${value};expires=${date.toUTCString()};path=/`;
+            localStorage.setItem(name, value); // Store in local storage
+        }
+
+        function getCookie(name) {
+            const cookies = document.cookie.split(';');
+            for (let cookie of cookies) {
+                const [key, value] = cookie.trim().split('=');
+                if (key === name) return value;
+            }
+            return localStorage.getItem(name); // Fallback to local storage
+        }
+
+        function acceptCookies() {
+            setCookie('cookieConsent', 'true', 365);
+            document.getElementById('cookie-banner').style.display = 'none';
+        }
+
+        function checkCookieConsent() {
+            if (!getCookie('cookieConsent')) {
+                document.getElementById('cookie-banner').style.display = 'block';
+            }
+        }
+
+        checkCookieConsent();

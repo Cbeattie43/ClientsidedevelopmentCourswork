@@ -123,31 +123,6 @@
 
     <button id="back-to-top" onclick="scrollToTop()">Back to Top</button>
 
-    <script>
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        function calculateInvestment() {
-            const principal = parseFloat(document.getElementById('principal').value);
-            const rate = parseFloat(document.getElementById('rate').value) / 100;
-            const years = parseInt(document.getElementById('years').value);
-
-            if (isNaN(principal) || isNaN(rate) || isNaN(years)) {
-                document.getElementById('result').textContent = 'Please enter valid numbers.';
-                return;
-            }
-
-            const amount = principal * Math.pow(1 + rate, years);
-            document.getElementById('result').textContent = `Future Value: £${amount.toFixed(2)}`;
-        }
-
-        function updateDateTime() {
-            const now = new Date();
-            document.getElementById('date-time').textContent = now.toLocaleString();
-        }
-        setInterval(updateDateTime, 1000);
-        updateDateTime();
-    </script>
+ 
 </body>
 </html>

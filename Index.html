@@ -12,36 +12,9 @@
         <p>We use cookies to improve your experience. By using our site, you agree to our <a href="privacy.html" style="color: #80cbc4;">Privacy Policy</a>.</p>
         <button onclick="acceptCookies()" style="background: #00796b; color: white; border: none; padding: 5px 10px; cursor: pointer;">Accept</button>
     </div>
-    <script>
-        function setCookie(name, value, days) {
-            const date = new Date();
-            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-            document.cookie = `${name}=${value};expires=${date.toUTCString()};path=/`;
-            localStorage.setItem(name, value); // Store in local storage
-        }
-
-        function getCookie(name) {
-            const cookies = document.cookie.split(';');
-            for (let cookie of cookies) {
-                const [key, value] = cookie.trim().split('=');
-                if (key === name) return value;
-            }
-            return localStorage.getItem(name); // Fallback to local storage
-        }
-
-        function acceptCookies() {
-            setCookie('cookieConsent', 'true', 365);
-            document.getElementById('cookie-banner').style.display = 'none';
-        }
-
-        function checkCookieConsent() {
-            if (!getCookie('cookieConsent')) {
-                document.getElementById('cookie-banner').style.display = 'block';
-            }
-        }
-
-        checkCookieConsent();
-    </script>
+  
+       
+   
 
     <!-- Header -->
     <header>
