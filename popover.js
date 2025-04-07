@@ -7,9 +7,7 @@ function openPopover(element, title, text) {
     popoverText.textContent = text;
   
     const rect = element.getBoundingClientRect();
-    popover.style.top = `${rect.bottom + window.scrollY + 10}px`;
-    popover.style.left = `${rect.left + window.scrollX}px`;
-    popover.style.display = 'block';
+    
   }
   
   function closePopover() {
