@@ -130,14 +130,35 @@ nav ul li .cta:hover {
 /* Services Overview */
 .services-overview {
     text-align: center;
-    padding: 50px 20px;
-    background: white;
+    padding: 60px 20px;
+    background: url('images/services-bg.jpg') no-repeat center center/cover;
+    color: white;
+    position: relative;
+}
+
+.services-overview::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 77, 64, 0.8); /* Dark overlay */
+    z-index: 0;
 }
 
 .services-overview h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #004d40;
+    position: relative;
+    z-index: 1;
+}
+
+.services-intro {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
 }
 
 .service-cards {
@@ -145,16 +166,20 @@ nav ul li .cta:hover {
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
 }
 
 .card {
-    background: #e0f2f1;
+    background: white;
     padding: 20px;
     border-radius: 10px;
     width: 300px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
 .card:hover {
@@ -167,16 +192,22 @@ nav ul li .cta:hover {
     height: auto;
     border-radius: 10px;
     margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover img {
+    transform: scale(1.1);
 }
 
 .card h3 {
     margin-bottom: 10px;
     color: #00796b;
+    font-size: 1.5rem;
 }
 
 .card p {
     color: #333;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 /* Testimonials */
