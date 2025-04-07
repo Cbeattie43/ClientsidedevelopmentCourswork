@@ -218,6 +218,11 @@ nav ul li .cta:hover {
     text-align: center;
 }
 
+.testimonials h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
 .testimonial-slider {
     display: flex;
     overflow-x: auto;
@@ -229,21 +234,40 @@ nav ul li .cta:hover {
 .testimonial {
     flex: 0 0 300px;
     background: white;
-    padding: 15px;
-    border-radius: 8px;
+    padding: 20px;
+    border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     scroll-snap-align: start;
     text-align: center;
+    color: #333;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #00796b;
 }
 
 .testimonial p {
     font-style: italic;
     margin-bottom: 10px;
+    font-size: 1rem;
 }
 
 .testimonial span {
     font-weight: bold;
     color: #00796b;
+    font-size: 0.9rem;
 }
 
 /* Newsletter */
