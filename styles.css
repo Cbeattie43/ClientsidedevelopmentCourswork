@@ -238,9 +238,8 @@ nav ul li .cta:hover {
     padding: 8px 0;
     position: absolute;
     z-index: 10;
-    bottom: 0%;
+    bottom: 20%;
     left: 24%;
-    top: 1px;
     margin-left: -80px;
   }
   
