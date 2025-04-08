@@ -98,3 +98,7 @@ function calculateInvestment() {
     const amount = principal * Math.pow(1 + rate, years);
     document.getElementById('result').textContent = `Future Value: £${amount.toFixed(2)}`;
 }
+function popupfunct() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+  }

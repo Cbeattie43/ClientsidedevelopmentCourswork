@@ -216,7 +216,58 @@ nav ul li .cta:hover {
     color: #333;
     font-size: 1rem;
 }
-
+  
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  /*  popup window */
+  .popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #00796b;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+  }
+  
+  .popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -7px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: #978787 transparent transparent transparent;
+  }
+  
+  .popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+  }
+  
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
 /* Testimonials */
 .testimonials {
     background: #00796b;
@@ -804,4 +855,7 @@ img:hover {
 .story p {
     color: #333;
     font-size: 0.9rem;
+}
+.card {
+
 }
