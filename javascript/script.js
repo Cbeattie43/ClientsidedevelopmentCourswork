@@ -99,6 +99,14 @@ function calculateInvestment() {
     document.getElementById('result').textContent = `Future Value: £${amount.toFixed(2)}`;
 }
 
+// Toggle FAQ Answer
+function toggleFaq(button) {
+    const answer = button.nextElementSibling;
+    const isVisible = answer.style.display === 'block';
+    document.querySelectorAll('.faq-answer').forEach(el => el.style.display = 'none'); // Close all answers
+    answer.style.display = isVisible ? 'none' : 'block'; // Toggle current answer
+}
+
 function popupfunct1() {
     var popup = document.getElementById("myPopup");
     popup.classList.toggle("show");

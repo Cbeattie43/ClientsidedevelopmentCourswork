@@ -97,6 +97,32 @@
             font-size: 14px;
             margin-top: 5px;
         }
+
+        .faq-item {
+            margin-bottom: 15px;
+        }
+
+        .faq-question {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: left;
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-top: 5px;
+        }
     </style>
 </head>
 <body>
@@ -159,12 +185,34 @@
     <section class="faq">
         <h2>Frequently Asked Questions</h2>
         <div class="faq-item">
-            <h3>How can I schedule a consultation?</h3>
-            <p>You can schedule a consultation by filling out the contact form or calling us directly.</p>
+            <button class="faq-question" onclick="toggleFaq(this)">What distinguishes Harland Wealth from other financial consultants?</button>
+            <div class="faq-answer">
+                <p>Our priorities are enduring partnerships, open guidance, and personalised plans. Your progress, not commissions, is what determines our success.</p>
+            </div>
         </div>
         <div class="faq-item">
-            <h3>What services do you offer?</h3>
-            <p>We offer investment planning, retirement planning, tax consulting, and wealth management.</p>
+            <button class="faq-question" onclick="toggleFaq(this)">Do you provide consultations virtually?</button>
+            <div class="faq-answer">
+                <p>Indeed! You can communicate with our advisors at any time and from any location with our secure video calls.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">To what extent is my financial information secure?</button>
+            <div class="faq-answer">
+                <p>We use bank-level encryption and follow strict data protection standards to ensure your personal and financial data stays safe.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">Does the initial consultation have a cost?</button>
+            <div class="faq-answer">
+                <p>Your first consultation is entirely free and gives us the opportunity to learn about your objectives and demonstrate how we can support you.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">Are small business owners a good fit for your services?</button>
+            <div class="faq-answer">
+                <p>Of course! We provide specialised financial solutions made especially to satisfy small business owners' requirements.</p>
+            </div>
         </div>
     </section>
 
