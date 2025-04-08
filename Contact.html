@@ -97,6 +97,32 @@
             font-size: 14px;
             margin-top: 5px;
         }
+
+        .faq-item {
+            margin-bottom: 15px;
+        }
+
+        .faq-question {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: left;
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-top: 5px;
+        }
     </style>
 </head>
 <body>
@@ -159,12 +185,22 @@
     <section class="faq">
         <h2>Frequently Asked Questions</h2>
         <div class="faq-item">
-            <h3>How can I schedule a consultation?</h3>
-            <p>You can schedule a consultation by filling out the contact form or calling us directly.</p>
+            <button class="faq-question" onclick="toggleFaq(this)">How can I schedule a consultation?</button>
+            <div class="faq-answer">
+                <p>You can schedule a consultation by filling out the contact form or calling us directly.</p>
+            </div>
         </div>
         <div class="faq-item">
-            <h3>What services do you offer?</h3>
-            <p>We offer investment planning, retirement planning, tax consulting, and wealth management.</p>
+            <button class="faq-question" onclick="toggleFaq(this)">What services do you offer?</button>
+            <div class="faq-answer">
+                <p>We offer investment planning, retirement planning, tax consulting, and wealth management.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">Where is your office located?</button>
+            <div class="faq-answer">
+                <p>Our office is located at 123 High Street, Belfast BT1 2BT.</p>
+            </div>
         </div>
     </section>
 

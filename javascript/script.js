@@ -98,3 +98,11 @@ function calculateInvestment() {
     const amount = principal * Math.pow(1 + rate, years);
     document.getElementById('result').textContent = `Future Value: £${amount.toFixed(2)}`;
 }
+
+// Toggle FAQ Answer
+function toggleFaq(button) {
+    const answer = button.nextElementSibling;
+    const isVisible = answer.style.display === 'block';
+    document.querySelectorAll('.faq-answer').forEach(el => el.style.display = 'none'); // Close all answers
+    answer.style.display = isVisible ? 'none' : 'block'; // Toggle current answer
+}
