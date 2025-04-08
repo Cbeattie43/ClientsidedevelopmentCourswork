@@ -57,6 +57,53 @@ nav ul li .cta:hover {
     background: #004d40;
 }
 
+/* Burger Menu */
+.burger-menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    .burger-menu {
+        display: block;
+    }
+
+    nav#main-nav {
+        display: none;
+        flex-direction: column;
+        background-color: #004d40;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    nav#main-nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    nav#main-nav ul li {
+        margin: 10px 0;
+    }
+
+    nav#main-nav ul li a {
+        font-size: 18px;
+    }
+
+    nav#main-nav.show {
+        display: flex;
+    }
+}
+
 /* Hero Section */
 .hero {
     position: relative;

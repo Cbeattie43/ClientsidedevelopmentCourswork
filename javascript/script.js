@@ -110,14 +110,20 @@ function toggleFaq(button) {
 function popupfunct1() {
     var popup = document.getElementById("myPopup");
     popup.classList.toggle("show");
-  }
+}
 
-  function popupfunct2() {
+function popupfunct2() {
     var popup = document.getElementById("myPopup2");
     popup.classList.toggle("show");
-  }
-  function popupfunct3() {
+}
+
+function popupfunct3() {
     var popup = document.getElementById("myPopup3");
     popup.classList.toggle("show");
-  }
-  
+}
+
+// Toggle Burger Menu
+function toggleMenu() {
+    const nav = document.getElementById('main-nav');
+    nav.classList.toggle('show');
+}
