@@ -809,14 +809,14 @@ img:hover {
 /* FAQ Section */
 .faq {
     padding: 50px 20px;
-    background: #f8f9fa;
+    background: #e0f2f1; /* Updated to match the site's light green theme */
     text-align: center;
 }
 
 .faq h2 {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: #004d40;
+    color: #004d40; /* Dark green for headings */
 }
 
 .faq-item {
@@ -826,7 +826,7 @@ img:hover {
 
 .faq-question {
     width: 100%;
-    background: #00796b;
+    background: #00796b; /* Updated to match the site's button color */
     color: white;
     padding: 15px;
     border: none;
@@ -838,7 +838,7 @@ img:hover {
 }
 
 .faq-question:hover {
-    background: #004d40;
+    background: #004d40; /* Darker green for hover effect */
 }
 
 .faq-answer {
