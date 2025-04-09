@@ -530,12 +530,13 @@ footer {
     bottom: 20px;
     right: 20px;
     background: #00796b;
-    color: white;
+    color: white; /* Ensure text is visible */
     border: none;
     border-radius: 50%;
     width: 50px;
     height: 50px;
-    font-size: 18px;
+    font-size: 14px; /* Adjust font size for better readability */
+    font-weight: bold; /* Make text more prominent */
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -548,6 +549,7 @@ footer {
 
 #back-to-top:hover {
     background: #004d40;
+    color: #80cbc4; /* Add hover effect for better visibility */
 }
 
 /* Calculator */
