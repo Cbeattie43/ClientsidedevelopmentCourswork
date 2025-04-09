@@ -1134,6 +1134,54 @@ img:hover {
     font-size: 0.9rem;
 }
 
+/* Cards Container */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    color: #00796b;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.card p {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.card .styled-list {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.card .styled-list li {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
 /* Pension Table */
 .pension-table-container {
     margin-top: 20px;
