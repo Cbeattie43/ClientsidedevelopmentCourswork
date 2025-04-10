@@ -681,8 +681,8 @@ img:hover {
 /* Contact Container */
 .contact-container {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    justify-content: space-between;
+    align-items: flex-start;
     margin: 50px auto;
     max-width: 1200px;
     padding: 20px;
@@ -690,50 +690,110 @@ img:hover {
 
 .contact-left, .contact-right {
     flex: 1;
-    min-width: 300px;
+    margin: 10px;
 }
 
 .contact-left {
-    text-align: center;
-}
-
-.contact-left img {
-    max-width: 80%;
-    height: auto;
-    margin: 20px auto;
-    border-radius: 15px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-}
-
-.contact-right {
-    background: rgba(255, 255, 255, 0.8);
     padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.popover {
-    position: absolute;
-    display: none;
-    z-index: 1000;
+.contact-left img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin: 20px auto;
+    display: block;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-.popover-content {
-    background: rgba(255, 255, 255, 0.8);
-    border: 1px solid #ccc;
-    padding: 1rem;
-    width: 250px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+.contact-right {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
     border-radius: 8px;
-    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.popover .close {
-    position: absolute;
-    top: 8px;
-    right: 12px;
-    font-size: 20px;
+.contact-form-container {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    resize: none;
+}
+
+.submit-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+}
+
+.faq-question {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.faq-answer {
+    display: none;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 5px;
 }
 
 /* Why Choose Us Section */
