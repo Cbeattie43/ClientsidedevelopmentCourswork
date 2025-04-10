@@ -84,6 +84,50 @@ function clearErrors() {
     document.querySelectorAll('.error-message').forEach(error => error.remove());
 }
 
+// Booking Form Validation
+function validateBookingForm() {
+    const name = document.getElementById('full-name');
+    const email = document.getElementById('email');
+    const phone = document.getElementById('phone');
+    const date = document.getElementById('date');
+    const time = document.getElementById('time');
+
+    clearErrors();
+
+    let isValid = true;
+
+    if (name.value.trim() === '') {
+        showError(name, 'Full name is required.');
+        isValid = false;
+    }
+
+    if (email.value.trim() === '' || !/^\S+@\S+\.\S+$/.test(email.value)) {
+        showError(email, 'Valid email address is required.');
+        isValid = false;
+    }
+
+    if (phone.value.trim() !== '' && !/^\d{10,15}$/.test(phone.value)) {
+        showError(phone, 'Phone number must be between 10 and 15 digits.');
+        isValid = false;
+    }
+
+    if (date.value.trim() === '') {
+        showError(date, 'Preferred date is required.');
+        isValid = false;
+    }
+
+    if (time.value.trim() === '') {
+        showError(time, 'Preferred time is required.');
+        isValid = false;
+    }
+
+    if (isValid) {
+        alert('Your booking has been submitted successfully!');
+    }
+
+    return isValid;
+}
+
 // Investment Calculator
 function calculateInvestment() {
     const principal = parseFloat(document.getElementById('principal').value);
@@ -107,6 +151,7 @@ function toggleFaq(button) {
     answer.style.display = isVisible ? 'none' : 'block'; // Toggle current answer
 }
 
+// Popups for Services
 function popupfunct1() {
     var popup = document.getElementById("myPopup");
     popup.classList.toggle("show");
@@ -126,4 +171,24 @@ function popupfunct3() {
 function toggleMenu() {
     const nav = document.getElementById('main-nav');
     nav.classList.toggle('show');
+}
+
+// Popover Functions
+function openPopover(element, title, text) {
+    const popover = document.getElementById('cardPopover');
+    const popoverTitle = document.getElementById('popoverTitle');
+    const popoverText = document.getElementById('popoverText');
+
+    popoverTitle.textContent = title;
+    popoverText.textContent = text;
+
+    const rect = element.getBoundingClientRect();
+    popover.style.top = `${rect.bottom + window.scrollY}px`;
+    popover.style.left = `${rect.left + window.scrollX}px`;
+    popover.style.display = 'block';
+}
+
+function closePopover() {
+    const popover = document.getElementById('cardPopover');
+    popover.style.display = 'none';
 }
