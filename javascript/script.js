@@ -107,6 +107,7 @@ function toggleFaq(button) {
     answer.style.display = isVisible ? 'none' : 'block'; // Toggle current answer
 }
 
+// Popups for Services
 function popupfunct1() {
     var popup = document.getElementById("myPopup");
     popup.classList.toggle("show");
@@ -126,4 +127,24 @@ function popupfunct3() {
 function toggleMenu() {
     const nav = document.getElementById('main-nav');
     nav.classList.toggle('show');
+}
+
+// Popover Functions
+function openPopover(element, title, text) {
+    const popover = document.getElementById('cardPopover');
+    const popoverTitle = document.getElementById('popoverTitle');
+    const popoverText = document.getElementById('popoverText');
+
+    popoverTitle.textContent = title;
+    popoverText.textContent = text;
+
+    const rect = element.getBoundingClientRect();
+    popover.style.top = `${rect.bottom + window.scrollY}px`;
+    popover.style.left = `${rect.left + window.scrollX}px`;
+    popover.style.display = 'block';
+}
+
+function closePopover() {
+    const popover = document.getElementById('cardPopover');
+    popover.style.display = 'none';
 }
