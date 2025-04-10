@@ -215,6 +215,7 @@ nav ul li .cta:hover {
     flex-wrap: wrap;
     position: relative;
     z-index: 1;
+    margin-top: 20px;
 }
 
 .service-cards img {
@@ -234,6 +235,7 @@ nav ul li .cta:hover {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     overflow: hidden;
+    border: 1px solid #ddd;
 }
 
 .card:hover {
@@ -243,10 +245,10 @@ nav ul li .cta:hover {
 
 .card img {
     width: 100%;
-    height: auto;
+    height: 200px;
+    object-fit: cover;
     border-radius: 10px;
     margin-bottom: 15px;
-    transition: transform 0.3s ease;
 }
 
 .card:hover img {
@@ -262,8 +264,24 @@ nav ul li .cta:hover {
 .card p {
     color: #333;
     font-size: 1rem;
+    margin-bottom: 15px;
 }
 
+.card .button {
+    background: #00796b;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.card .button:hover {
+    background: #004d40;
+}
+
+/* Popup */
 .popup {
     position: relative;
     display: inline-block;
