@@ -3,48 +3,13 @@
 <head>
     <title>Our Services</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="javascript/script.js"></script>
-    <link rel="icon"type="image/x-icon" href="Images/Harland Wealth Logo.png" alt="logo">
-    <style>
-        /* Align the Retirement Planning heading to the left */
-        .popup h3 {
-            text-align: left;
-            margin-left: 0;
-        }
-
-        .services-links {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            margin: 20px 0;
-            gap: 20px; /* Space between containers */
-        }
-
-        .service-container {
-            text-align: center;
-            width: 30%; /* Adjust width as needed */
-        }
-
-        .service-container img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        .service-container h3 a {
-            text-decoration: none;
-            color: #333;
-        }
-
-        .service-container h3 a:hover {
-            color: #007BFF;
-        }
-    </style>
+    <script src="javascript/script.js" defer></script>
+    <link rel="icon"type="image/x-icon" href="Images/Harland Wealth Logo.png">
 </head>
 <body>
     <!-- Header -->
     <header>
-        <div class="header-logo" alt="header logo">
+        <div class="header-logo">
             <a href="index.html">
                 <img src="Images/New Logo 2.png" alt="Harland Wealth Logo">
             </a>
@@ -66,100 +31,71 @@
   
 
     <!-- Services Section -->
-    <section class="content" alt="financial services">
+    <section class="content">
         <h1>Our Financial Services</h1>
         <p>Explore our expert financial services, including investment and tax planning.</p>
     </section>
 
-    <section class="services-overview" aly="overview of the services we provide">
+    <section class="services-overview">
         <h2>Explore Our Services</h2>
+        <p>Discover how we can help you achieve your financial goals with our wide range of services.</p>
         <div class="service-cards">
-    
-            <div class="popup" onclick="popupfunct1()" alt="investment planning popup">
-            <span class="popuptext" id="myPopup"><p>📈 Ready to Grow Your Wealth?
-                Discover Smart Investment Planning with Harland wealth
-
-                Take control of your financial future with a personalized investment strategy designed to meet your goals. Whether you're saving for retirement, building wealth, or planning for your children’s education, our expert advisors are here to help.
-                
-                ✅ Customized portfolio planning
-                ✅ Risk management strategiesS
-                ✅ Long-term wealth growth
-                ✅ Expert insights and guidance
-                
-                Start planning today — your future self will thank you.
-                
-                👉 click "get started" above to sceure your future wealth</p></span>
-            <h3>Investment Planning</h3>
-            <p>Maximize your wealth with tailored investment strategies.</p>
+            <div class="card">
+                <img src="Images/Investment Planning.jpg" alt="Investment Planning">
+                <h3>Investment Planning</h3>
+                <p>Maximize your wealth with tailored investment strategies.</p>
+                <a href="investment-guide.html" class="button">Learn More</a>
             </div>
-            <div class="popup" onclick="popupfunct2()" alt="Retirment planning popup">
-                <span class="popuptext" id="myPopup2"><p>🏖️ Plan Today, Relax Tomorrow
-                    Secure Your Future with Expert Retirement Planning
-                    
-                    It’s never too early — or too late — to start planning for the retirement you deserve. At Harland Wealth, we build tailored retirement strategies to ensure your money works for you, long after you’ve stopped working.
-                    
-                    ✅ Personalized retirement roadmaps
-                    ✅ Tax-efficient savings strategies
-                    ✅ Income planning that lasts
-                    ✅ Peace of mind for your golden years
-                    
-                    Let’s turn your retirement dreams into a reality.
-                    
-                    👉 click "get started" above to sceure your future wealth
-                </p>
-                     </span>
+            <div class="card">
+                <img src="Images/Retierment planning.jpg" alt="Retirement Planning">
                 <h3>Retirement Planning</h3>
                 <p>Plan for a secure and comfortable retirement.</p>
+                <a href="retirement-2025.html" class="button">Learn More</a>
             </div>
-            <div class="popup" onclick="popupfunct3()" alt="tax consulting popup">
-                <span class="popuptext" id="myPopup3"><p>💼 Keep More of What You Earn
-                    Smarter Tax Strategies with harland Wealth
-                    
-                    Don’t let taxes eat away at your hard-earned income. Our expert tax consultants help individuals and businesses uncover opportunities to reduce liabilities, maximize deductions, and stay fully compliant.
-                    
-                    ✅ Personalized tax planning
-                    ✅ Year-round consulting & support
-                    ✅ Strategic savings for individuals & businesses
-                    ✅ Full compliance with peace of mind
-                    
-                    Get clarity. Save money. Stay ahead.
-                    
-                    👉 click "get started" above to sceure your future wealth</p></span>
+            <div class="card">
+                <img src="Images/Tax consulting 2.jpg" alt="Tax Consulting">
                 <h3>Tax Consulting</h3>
                 <p>Optimize your taxes with expert advice.</p>
+                <a href="tax-tips.html" class="button">Learn More</a>
             </div>
         </div>
     </section>
 
-    <section class="services-links">
-        <div class="service-container">
-            <div class="service-image">
-                <img src="images/investment.jpg" alt="Investment Planning">
-            </div>
-            <h3><a href="resources.html#investment-guides">Investment Planning</a></h3>
-            <p>Maximize your wealth with tailored investment strategies.</p>
-        </div>
-        <div class="service-container">
-            <div class="service-image">
-                <img src="images/retirement.jpeg" alt="Retirement Planning">
-            </div>
-            <h3><a href="resources.html#retirement-planning">Retirement Planning</a></h3>
-            <p>Plan for a secure and comfortable retirement with expert guidance.</p>
-        </div>
-        <div class="service-container">
-            <div class="service-image">
-                <img src="images/tax.jpg" alt="Tax Consulting">
-            </div>
-            <h3><a href="resources.html#tax-strategies">Tax Consulting</a></h3>
-            <p>Optimize your taxes with expert advice and strategies.</p>
+    <section class="services-overview">
+        <h2>Book Your Online Appointment</h2>
+        <p>Schedule a free consultation with one of our expert financial advisors to discuss your goals and create a personalized plan.</p>
+        <div class="booking-form-container">
+            <form class="booking-form" id="booking-form" onsubmit="return validateBookingForm()">
+                <div class="form-group">
+                    <label for="full-name">Full Name</label>
+                    <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" pattern="[0-9]{10,15}" title="Please enter a valid phone number">
+                </div>
+                <div class="form-group">
+                    <label for="date">Preferred Date</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="time">Preferred Time</label>
+                    <input type="time" id="time" name="time" required>
+                </div>
+                <button type="submit" class="submit-button">Book Now</button>
+            </form>
         </div>
     </section>
 
     
     <!-- Footer -->
     <footer>
-        <div class="footer-content" alt="footer">
-            <div class="footer-column" alt="other webpages">
+        <div class="footer-content">
+            <div class="footer-column">
                 <h3>Quick Links</h3>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -169,7 +105,7 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
-            <div class="footer-column" alt="contact information">
+            <div class="footer-column">
                 <h3>Contact Us</h3>
                 <p><strong>Phone:</strong> +44 07234 9382</p>
                 <p><strong>Email:</strong> support@harlandwealth.com</p>
@@ -177,7 +113,7 @@
             </div>
             <div class="footer-column">
                 <h3>Follow Us</h3>
-                <div class="socials" alt="social media accounts">
+                <div class="socials">
                     <a href="https://facebook.com" target="_blank" class="social-button">
                         <img src="Images/Facebook-icon.svg" alt="Facebook">
                     </a>
