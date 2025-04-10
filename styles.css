@@ -1388,3 +1388,34 @@ img:hover {
 .booking-form .submit-button:hover {
     background: #004d40;
 }
+
+/* Online Consultation Section */
+.online-consultation {
+    text-align: center;
+    padding: 50px 20px;
+    background: #e0f2f1;
+    color: #004d40;
+}
+
+.online-consultation h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.online-consultation p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.online-consultation .styled-list {
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto 20px;
+    padding-left: 20px;
+}
+
+.online-consultation .styled-list li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
