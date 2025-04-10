@@ -552,6 +552,26 @@ footer {
     color: #80cbc4; /* Add hover effect for better visibility */
 }
 
+/* Back Button */
+.back-button-container {
+    margin: 20px;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #00796b;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #004d40;
+}
+
 /* Calculator */
 .calculator {
     max-width: 400px;
