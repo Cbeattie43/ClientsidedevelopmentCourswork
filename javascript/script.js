@@ -9,7 +9,16 @@ updateDateTime();
 // Scroll to Top
 function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    document.body.focus(); // Return focus to the body for accessibility
 }
+
+// Lazy load images for performance
+document.addEventListener("DOMContentLoaded", () => {
+    const images = document.querySelectorAll("img");
+    images.forEach(img => {
+        img.setAttribute("loading", "lazy");
+    });
+});
 
 // Cookie Consent
 function setCookie(name, value, days) {
