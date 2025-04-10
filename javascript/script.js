@@ -84,6 +84,50 @@ function clearErrors() {
     document.querySelectorAll('.error-message').forEach(error => error.remove());
 }
 
+// Booking Form Validation
+function validateBookingForm() {
+    const name = document.getElementById('full-name');
+    const email = document.getElementById('email');
+    const phone = document.getElementById('phone');
+    const date = document.getElementById('date');
+    const time = document.getElementById('time');
+
+    clearErrors();
+
+    let isValid = true;
+
+    if (name.value.trim() === '') {
+        showError(name, 'Full name is required.');
+        isValid = false;
+    }
+
+    if (email.value.trim() === '' || !/^\S+@\S+\.\S+$/.test(email.value)) {
+        showError(email, 'Valid email address is required.');
+        isValid = false;
+    }
+
+    if (phone.value.trim() !== '' && !/^\d{10,15}$/.test(phone.value)) {
+        showError(phone, 'Phone number must be between 10 and 15 digits.');
+        isValid = false;
+    }
+
+    if (date.value.trim() === '') {
+        showError(date, 'Preferred date is required.');
+        isValid = false;
+    }
+
+    if (time.value.trim() === '') {
+        showError(time, 'Preferred time is required.');
+        isValid = false;
+    }
+
+    if (isValid) {
+        alert('Your booking has been submitted successfully!');
+    }
+
+    return isValid;
+}
+
 // Investment Calculator
 function calculateInvestment() {
     const principal = parseFloat(document.getElementById('principal').value);
