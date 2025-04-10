@@ -18,7 +18,7 @@ a {
 }
 
 a:hover {
-    color: #004d40;
+    color: #ffcc00; /* Bright yellow for better visibility */
     text-decoration: none;
 }
 
@@ -56,6 +56,10 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: #ffcc00; /* Bright yellow for better visibility */
 }
 
 nav ul li .cta {
@@ -128,7 +132,8 @@ nav ul li .cta:hover {
 }
 
 .button:hover {
-    background: #005a4c; /* Darker hover color for better contrast */
+    background: #ffcc00; /* Bright yellow for better visibility */
+    color: #004d40; /* Dark green text for contrast */
 }
 
 .secondary-button {
@@ -353,8 +358,8 @@ nav ul li .cta:hover {
 }
 
 .newsletter-form button:hover {
-    background: #80cbc4;
-    color: #004d40;
+    background: #ffcc00; /* Bright yellow for better visibility */
+    color: #004d40; /* Dark green text for contrast */
 }
 
 /* Footer */
@@ -481,8 +486,8 @@ footer {
 }
 
 #back-to-top:hover {
-    background: #004d40;
-    color: #80cbc4; /* Add hover effect for better visibility */
+    background: #ffcc00; /* Bright yellow for better visibility */
+    color: #004d40; /* Dark green text for contrast */
 }
 
 /* Back Button */
@@ -676,7 +681,8 @@ img:hover {
 }
 
 .submit-button:hover {
-    background-color: #005a4c; /* Darker hover color for better contrast */
+    background: #ffcc00; /* Bright yellow for better visibility */
+    color: #004d40; /* Dark green text for contrast */
 }
 
 .error-message {
@@ -700,6 +706,11 @@ img:hover {
     font-size: 16px;
     cursor: pointer;
     text-align: left;
+}
+
+.faq-question:hover {
+    background: #ffcc00; /* Bright yellow for better visibility */
+    color: #004d40; /* Dark green text for contrast */
 }
 
 .faq-answer {
@@ -952,7 +963,8 @@ img:hover {
 }
 
 .faq-question:hover {
-    background: #004d40; /* Darker green for hover effect */
+    background: #ffcc00; /* Bright yellow for better visibility */
+    color: #004d40; /* Dark green text for contrast */
 }
 
 .faq-answer {
